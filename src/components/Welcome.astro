@@ -1,10 +1,14 @@
 ---
-
+import { Image } from "astro:assets";
+import Arrow from "../assets/icons/arrow-narrow-down.svg";
 ---
 
-<main class="w-full h-screen flex flex-col items-center" id="index">
+<main
+  class="w-full h-screen flex flex-col items-center bg-secondary-bg"
+  id="index"
+>
   <header
-    class="w-full min-h-15 flex items-center justify-between px-5 border-b border-main-border bg-transparent"
+    class="w-full min-h-15 flex items-center justify-between px-5 border-b border-main-border bg-transparent fixed top-0 backdrop-blur-sm"
   >
     <div>
       <h1 class="font-text text-xl font-bold tracking-wide">Tadeo Wotoszyn</h1>
@@ -27,26 +31,19 @@
     </div>
   </header>
   <div
-    class="w-full h-full pt-5 flex flex-col justify-between items-center p-2"
+    class="w-full h-full pt-10 flex flex-col justify-between items-center p-2"
   >
     <h1 class="text-center text-[10rem] font-title font-extrabold">
       Tadeo Wotoszyn
     </h1>
-    <div class="w-full h-full bg-amber-200 flex items-end justify-between">
-      <div>
+    <div class="w-full h-full flex items-end justify-between">
+      <div class="text-lg font-text font-extrabold tracking-wide">
         <p>WEB DEVELOPER</p>
         <p>WELCOME TO MY PORFOLIO</p>
       </div>
-      <div>
-        <img
-          src="/images/me.webp"
-          alt="picture of me"
-          class="w-40 shadow-2xl"
-        />
-      </div>
-      <div>
+      <div class="flex font-default items-center">
         <p>SCROLL DOWN</p>
-        <img src="" alt="" />
+        <Image src={Arrow} alt="down arrow" class="w-6" />
       </div>
     </div>
   </div>
