@@ -1,1 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=GFS+Didot&family=IBM+Plex+Mono&family=Inter:opsz@14..32&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-nav: "IBM Plex Mono", monospace;
+  --font-text: "EB Garamond", serif;
+  --font-default: "Inter", sans-serif;
+  --font-title: "GFS Didot", serif;
+
+  --color-main-bg: #f4f1ea;
+  --color-secondary-bg: #fdfed8;
+  --color-text: #0f0d06;
+  --color-main-border: #c6c5b0;
+}
