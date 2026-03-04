@@ -12,6 +12,10 @@ import html5 from "../assets/icons/file-type-html.svg";
 import css3 from "../assets/icons/brand-css3.svg";
 import spring from "../assets/icons/spring-boot-svgrepo-com.svg";
 import mysql from "../assets/icons/brand-mysql.svg";
+import dashboard from "../assets/projects/aidashboard.png"
+import azeroth from "../assets/projects/azeroth.png"
+import loficorner from "../assets/projects/loficorner.png"
+import todo from "../assets/projects/todo.png"
 
 
 export const socialMediaData = [
@@ -89,35 +93,39 @@ export const skillsData = [
 ];
 
 
-/*
-export const imagesData = [
+
+export const projectData = [
   {
     id: 1,
-    src: "/project1.png",
-    title: "React retro ecoommerce",
-    tags: ["React", "Tailwind", "Typescript"],
-    to: "https://retro-ecommerce-jade.vercel.app",
+    src: dashboard,
+    title: "Prisma Dashboard",
+    desc: "Fullstack dashboard to improve your prompts focused on developers.",
+    tags: ["Nextjs", "Tailwind", "Supabase", "AI-SDK", "Typescript"],
+    to: "https://github.com/tadeowoto/ai-dashboard/tree/feature/supabaselogin",
   },
   {
     id: 2,
-    src: "/project2.png",
-    title: "Mission Control X",
-    tags: ["React", "Tailwind", "Typescript"],
-    to: "https://mission-controlx.vercel.app",
+    src: azeroth,
+    title: "Azheroth Notes",
+    desc: "A full-stack app for notes on the free resources I used throughout my learning, inspired by boot.dev using WarcraftCN",
+    tags: ["Astro", "Tailwind", "Typescript", "Spring Boot", "MySql"],
+    to: "https://github.com/tadeowoto/azeroth-dev",
   },
   {
     id: 3,
-    src: "/project3.png",
-    title: "Artify",
-    tags: ["html", "css", "javascript"],
-    to: "https://artify-topaz.vercel.app",
+    src: loficorner,
+    title: "Loficorner",
+    desc: "A Spotify clone for listening to lofi",
+    tags: ["Astro", "tailwind"],
+    to: "https://github.com/tadeowoto/lofi-corner",
   },
   {
     id: 4,
-    src: "/project4.png",
+    src: todo,
     title: "Windows 95 TODO",
+    desc: "A todo list inspired by Windows 95",
     tags: ["React", "Tailwind", "Typescript"],
     to: "https://windows95-todo.vercel.app/",
   },
 ];
-*/
+
