@@ -16,13 +16,39 @@ import Arrow from "../assets/icons/arrow-narrow-down.svg";
     <div>
       <nav class="font-nav">
         <ul class="flex gap-3">
-          <li><a href="#index">INDEX</a></li>
+          <li>
+            <a href="#index" class="relative py-1 group"
+              >INDEX
+              <span
+                class="absolute bottom-0 left-0 w-0 h-px bg-text transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+          </li>
           <p>/</p>
-          <li><a href="#about">ABOUT</a></li>
+          <li>
+            <a href="#about" class="relative py-1 group"
+              >ABOUT<span
+                class="absolute bottom-0 left-0 w-0 h-px bg-text transition-all duration-300 group-hover:w-full"
+              ></span></a
+            >
+          </li>
           <p>/</p>
-          <li><a href="#projects">PROJECTS</a></li>
+          <li>
+            <a href="#projects" class="relative py-1 group"
+              >PROJECTS <span
+                class="absolute bottom-0 left-0 w-0 h-px bg-text transition-all duration-300 group-hover:w-full"
+              ></span></a
+            >
+          </li>
           <p>/</p>
-          <li><a href="#contact">CONTACT</a></li>
+          <li>
+            <a href="#contact" class="relative py-1 group"
+              >CONTACT
+              <span
+                class="absolute bottom-0 left-0 w-0 h-px bg-text transition-all duration-300 group-hover:w-full"
+              ></span></a
+            >
+          </li>
         </ul>
       </nav>
     </div>
@@ -45,7 +71,7 @@ import Arrow from "../assets/icons/arrow-narrow-down.svg";
       </div>
       <div class="flex font-default items-center">
         <p>SCROLL DOWN</p>
-        <Image src={Arrow} alt="down arrow" class="w-6" />
+        <Image src={Arrow} alt="down arrow" class="w-6 animate-bounce" />
       </div>
     </div>
   </div>
