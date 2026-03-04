@@ -1,0 +1,17 @@
+---
+import { skillsData } from "../mocks/data.ts";
+import SkillsTag from "./SkillsTag.astro";
+---
+
+<div class="h-full w-full flex flex-col items-center justify-start">
+  <h1
+    class="text-2xl font-title font-bold tracking-wide underline underline-offset-4 mb-5"
+  >
+    Skills
+  </h1>
+  <ul
+    class="grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-6 font-mono text-sm tracking-wide mb-5"
+  >
+    {skillsData.map((item) => <SkillsTag item={item} />)}
+  </ul>
+</div>
