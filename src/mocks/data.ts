@@ -2,7 +2,6 @@
 import linkedin from "../assets/icons/brand-linkedin.svg";
 import github from "../assets/icons/brand-github.svg";
 import gmail from "../assets/icons/brand-gmail.svg";
-
 import react from "../assets/icons/brand-react.svg";
 import java from "../assets/icons/java-svgrepo-com.svg";
 import nodejs from "../assets/icons/brand-nodejs.svg";
@@ -13,6 +12,8 @@ import html5 from "../assets/icons/file-type-html.svg";
 import css3 from "../assets/icons/brand-css3.svg";
 import spring from "../assets/icons/spring-boot-svgrepo-com.svg";
 import mysql from "../assets/icons/brand-mysql.svg";
+
+
 export const socialMediaData = [
   {
     id: 1,

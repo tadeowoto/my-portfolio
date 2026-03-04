@@ -1,30 +1,28 @@
 ---
-const { title, image, desc, tech } = Astro.props;
+const { title, src, desc, tags, to } = Astro.props;
 ---
 
 <a
-  href=""
+  href={to}
   class="flex w-sm h-full bg-amber-500 border border-main-border rounded-b-sm"
 >
   <div class="w-full h-full flex flex-col items-center">
     <header class="w-full h-2/3 bg-amber-600">
-      <img src="proyecto.jpg" alt="Miniatura del curso de React" />
+      <img src={src} alt="Miniatura del curso de React" />
     </header>
 
     <main class="w-full flex flex-col items-center max-h-1/5">
       <h1 class="text-2xl font-bold font-title tracking-wider">
-        Título del Proyecto
+        {title}
       </h1>
       <p class="text-md font-default text-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nemo
-        voluptas nobis dolore molestias rerum,
+        {desc}
       </p>
     </main>
 
     <footer class="w-full h-1/7">
       <ul class="w-full h-full">
-        <li>React</li>
-        <li>Spring Boot</li>
+        {tags.map((item: any) => <li>{item}</li>)}
       </ul>
     </footer>
   </div>
