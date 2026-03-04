@@ -1,0 +1,91 @@
+---
+import Mail from "../assets/icons/brand-gmail.svg";
+import Github from "../assets/icons/brand-github.svg";
+import Linkedin from "../assets/icons/brand-linkedin.svg";
+---
+
+<footer
+  class="w-full bg-secondary-bg border-t border-main-border relative overflow-hidden"
+>
+  <div class="absolute inset-0 pointer-events-none" id="footer-background">
+  </div>
+
+  <article
+    class="relative z-10 max-w-7xl mx-auto px-6 py-16 flex flex-col gap-12"
+  >
+    <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+      <div class="max-w-md">
+        <h2 class="text-4xl font-title italic text-text mb-4">
+          Let's build the next path together.
+        </h2>
+        <p class="font-text text-lg text-text/70">
+          Actualmente disponible para proyectos freelance y colaboraciones en
+          desarrollo Full-Stack.
+        </p>
+      </div>
+
+      <a
+        href="mailto:tadeo.woto@gmail.com"
+        class="group flex items-center gap-3 bg-button text-footer-bg px-10 py-3 rounded-full font-nav text-sm hover:scale-105 transition-transform"
+      >
+        SAY HELLO
+        <Mail class="w-6 h-6" />
+      </a>
+    </div>
+
+    <hr class="border-main-border" />
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-end">
+      <div class="flex flex-col gap-4">
+        <span
+          class="font-nav text-[10px] uppercase tracking-[0.2em] text-text/40"
+          >Navigation</span
+        >
+        <nav class="flex flex-col gap-2 font-nav text-xs">
+          <a href="#index" class="hover:underline">INDEX</a>
+          <a href="#about" class="hover:underline">ABOUT</a>
+          <a href="#projects" class="hover:underline">PROJECTS</a>
+        </nav>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <span
+          class="font-nav text-[10px] uppercase tracking-[0.2em] text-text/40"
+          >Connect</span
+        >
+        <div class="flex gap-6">
+          <a
+            href="https://github.com"
+            class="hover:text-text/50 transition-colors"
+            ><Github class="w-6 h-6" /></a
+          >
+          <a
+            href="https://linkedin.com"
+            class="hover:text-text/50 transition-colors"
+            ><Linkedin class="w-6 h-6" /></a
+          >
+        </div>
+      </div>
+
+      <div class="flex flex-col md:items-end gap-2 text-right">
+        <p class="font-nav text-[10px] text-text/40">
+          2026 TADEO WOTOSZYN GRILLO
+        </p>
+        <p class="font-nav text-[10px] text-text/40 tracking-tighter">
+          BUILT WITH ASTRO & SO MUCH MATE 🧉
+        </p>
+      </div>
+    </div>
+  </article>
+</footer>
+
+<style>
+  #footer-background {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: repeat;
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+    background-color: var(--color-footer-bg);
+    opacity: 0.5;
+  }
+</style>
