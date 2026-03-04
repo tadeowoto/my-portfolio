@@ -1,5 +1,6 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
+import { projectData } from "../mocks/data";
 ---
 
 <section
@@ -11,8 +12,17 @@ import ProjectCard from "./ProjectCard.astro";
   >
     Projects
   </h1>
-  <article
-    class="flex items-center justify-center gap-2 w-full h-4/5 bg-amber-200"
-  >
+  <article class="flex items-center justify-center gap-2 w-full h-4/5">
+    {
+      projectData.map((item) => (
+        <ProjectCard
+          title={item.title}
+          src={item.src}
+          desc={item.desc}
+          tags={item.tags}
+          to={item.to}
+        />
+      ))
+    }
   </article>
 </section>
