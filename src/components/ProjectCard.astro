@@ -1,6 +1,5 @@
 ---
 import Image from "astro/components/Image.astro";
-
 const { title, src, desc, tags, to } = Astro.props;
 ---
 
@@ -8,37 +7,39 @@ const { title, src, desc, tags, to } = Astro.props;
   href={to}
   target="_blank"
   rel="noopener noreferrer"
-  class="group flex flex-col w-sm h-full bg-transparent border border-main-border rounded-b-sm transition-all duration-300 hover:shadow-sm hover:transform hover:scale-102 hover:-translate-y-2 hover:z-10"
+  class="group flex flex-col w-full bg-transparent border border-main-border rounded-b-sm transition-all duration-300 hover:shadow-sm md:hover:scale-102 md:hover:-translate-y-2 hover:z-10"
 >
-  <div class="w-full h-full flex flex-col items-center">
+  <div class="w-full h-full flex flex-col">
     <header
-      class="w-full h-2/3 border-b border-main-border overflow-hidden bg-main-border"
+      class="w-full aspect-video border-b border-main-border overflow-hidden bg-main-border"
     >
       <Image
         src={src}
         alt={`Miniatura de ${title}`}
-        class={"w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"}
+        class="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
       />
     </header>
 
-    <main class="w-full flex flex-col items-center p-4 min-h-1/5 gap-1">
-      <h1 class="text-xl font-bold font-title tracking-tight text-text italic">
+    <main class="w-full flex flex-col items-center p-5 gap-2">
+      <h1
+        class="text-lg md:text-xl font-bold font-title tracking-tight text-text italic text-center"
+      >
         {title}
       </h1>
       <p
-        class="text-sm font-text text-center text-text/80 leading-tight line-clamp-2"
+        class="text-xs md:text-sm font-text text-center text-text/80 leading-snug line-clamp-3"
       >
         {desc}
       </p>
     </main>
 
-    <footer class="w-full mt-auto pb-4">
+    <footer class="w-full mt-auto pb-5">
       <ul
-        class="w-full flex flex-row flex-wrap items-center justify-center gap-2 px-2"
+        class="w-full flex flex-row flex-wrap items-center justify-center gap-2 px-4"
       >
         {
           tags.map((item: string) => (
-            <li class="px-2 py-0.5 border border-main-border rounded-full text-[10px] uppercase font-nav text-text/60 tracking-tighter">
+            <li class="px-2 py-0.5 border border-main-border rounded-full text-[9px] md:text-[10px] uppercase font-nav text-text/60 tracking-tighter">
               {item}
             </li>
           ))

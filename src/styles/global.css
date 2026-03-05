@@ -13,4 +13,7 @@
   --color-main-border: #c6c5b0;
   --color-footer-bg: #cecbbb;
   --color-button: #4e98a6;
+
+  --breakpoint-xxs: 320px;
+  --breakpoint-xs: 480px;
 }

@@ -3,30 +3,38 @@ import { Image } from "astro:assets";
 import Me from "../assets/images/me.webp";
 ---
 
-<article class="w-full h-2/4">
-  <div class="w-full h-full flex items-center justify-evenly gap-5">
-    <div>
+<article class="w-full lg:h-2/4">
+  <div
+    class="w-full flex flex-col lg:flex-row items-center justify-evenly gap-8 lg:gap-5"
+  >
+    <div class="w-full flex justify-center lg:w-auto">
       <Image
         src={Me}
         alt="Tadeo Wotoszyn"
-        class="w-70 rounded-tr-3xl rounded-bl-3xl"
+        class="w-48 xxs:w-56 xs:w-64 lg:w-70 rounded-tr-3xl rounded-bl-3xl grayscale hover:grayscale-0 transition-all duration-500"
       />
     </div>
-    <div class="flex flex-col gap-8 max-w-1/2">
+    <div
+      class="flex flex-col gap-6 lg:gap-8 w-full lg:max-w-1/2 text-center lg:text-left"
+    >
       <div class="flex flex-col gap-2">
-        <h class="text-5xl font-bold tracking-wide font-title"
-          >Tadeo Wotoszyn Grillo.</h
+        <h1
+          class="text-3xl xxs:text-4xl lg:text-5xl font-bold tracking-wide font-title text-text"
         >
-        <h2 class="text-2xl font-default">Web Developer</h2>
+          Tadeo Wotoszyn Grillo.
+        </h1>
+        <h2 class="text-lg lg:text-2xl font-default italic opacity-80">
+          Web Developer
+        </h2>
       </div>
       <div class="flex flex-col gap-2">
-        <h1 class="text-3xl font-title underline underline-offset-4">
+        <h2 class="text-xl lg:text-3xl font-title underline underline-offset-4">
           About Me
-        </h1>
-        <p class="text-xl font-default">
-          Front-End Developer student, im currently learning in Universidad de
+        </h2>
+        <p class="text-base lg:text-xl font-text leading-relaxed">
+          Front-End Developer student, I'm currently learning in Universidad de
           la Punta, besides I am also a self-taught student. I have a passion
-          for tecnologies, design, coding, aerospace and AI.
+          for technologies, design, coding, aerospace and AI.
         </p>
       </div>
     </div>
