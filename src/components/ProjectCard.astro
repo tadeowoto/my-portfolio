@@ -1,12 +1,20 @@
 ---
 import Image from "astro/components/Image.astro";
-const { title, src, desc, tags, to } = Astro.props;
+const { title, src, desc, tags, to, id } = Astro.props;
+
+let target = "_blank";
+let rel = "noopener noreferrer";
+
+if (id == 1 || id == 2) {
+  target = "";
+  rel = "";
+}
 ---
 
 <a
   href={to}
-  target="_blank"
-  rel="noopener noreferrer"
+  target={target}
+  rel={rel}
   class="group flex flex-col w-full bg-transparent border border-main-border rounded-b-sm transition-all duration-300 hover:shadow-sm md:hover:scale-102 md:hover:-translate-y-2 hover:z-10"
 >
   <div class="w-full h-full flex flex-col">
