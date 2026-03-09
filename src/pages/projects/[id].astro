@@ -1,0 +1,22 @@
+---
+import { projectData } from "../../mocks/data.ts";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  return projectData.map((project) => {
+    return {
+      params: {
+        id: project.id.toString(),
+      },
+    };
+  });
+}
+
+const { id } = Astro.params;
+const project = projectData.find((project) => project.id === Number(id));
+---
+
+<Layout>
+  <h1>{project?.title}</h1>
+  <p>{project?.desc}</p>
+</Layout>

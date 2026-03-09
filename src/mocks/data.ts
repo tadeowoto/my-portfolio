@@ -101,7 +101,8 @@ export const projectData = [
     title: "Prisma Dashboard",
     desc: "Fullstack dashboard to improve your prompts focused on developers.",
     tags: ["Nextjs", "Tailwind", "Supabase", "AI-SDK", "Typescript", "Google Sdk", "Github 0auth"],
-    to: "https://github.com/tadeowoto/ai-dashboard/tree/feature/supabaselogin",
+    to: "/projects/1",
+    yt: "https://www.youtube.com/watch?v=Y1rpKwtOfJI",
   },
   {
     id: 2,
@@ -110,6 +111,7 @@ export const projectData = [
     desc: "A full-stack app for notes on the free resources I used throughout my learning, inspired by boot.dev using WarcraftCN.",
     tags: ["Astro", "Tailwind", "Typescript", "Spring Boot", "MySql"],
     to: "https://github.com/tadeowoto/azeroth-dev",
+    yt: "https://www.youtube.com/watch?v=I6XpZ6XpZ6X",
   },
   {
     id: 3,
