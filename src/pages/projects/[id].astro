@@ -1,6 +1,8 @@
 ---
 import { projectData } from "../../mocks/data.ts";
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import "../../styles/global.css";
 
 export async function getStaticPaths() {
   return projectData.map((project) => {
@@ -16,7 +18,109 @@ const { id } = Astro.params;
 const project = projectData.find((project) => project.id === Number(id));
 ---
 
-<Layout>
-  <h1>{project?.title}</h1>
-  <p>{project?.desc}</p>
+<Layout title={project?.title}>
+  <main
+    class="w-full min-h-screen bg-secondary-bg pt-24 pb-20 px-6 md:px-12 lg:px-24 flex flex-col gap-16 relative overflow-hidden"
+  >
+    <header
+      class="relative z-10 flex flex-col lg:flex-row justify-between items-end gap-10"
+    >
+      <div class="w-full lg:w-2/3">
+        <span
+          class="font-nav text-[10px] md:text-xs uppercase tracking-[0.4em] text-text/40 mb-4 block"
+          >Project Case Study // 0{project?.id}</span
+        >
+        <h1
+          class="text-[12vw] lg:text-[8rem] font-title font-extrabold leading-[0.8] tracking-tighter text-text"
+        >
+          {project?.title.split(" ")[0]}
+          <br />
+          <span class="italic font-light ml-[5vw]"
+            >{project?.title.split(" ")[1] || ""}</span
+          >
+        </h1>
+      </div>
+
+      <div
+        class="w-full lg:w-1/3 flex flex-col gap-4 border-l border-main-border pl-6"
+      >
+        <p class="font-text text-xl md:text-2xl leading-tight text-pretty">
+          {project?.desc}
+        </p>
+        <div class="flex flex-wrap gap-2">
+          {
+            project?.tags.map((tag) => (
+              <span class="font-nav text-[9px] uppercase border border-main-border px-2 py-1 rounded-full">
+                {tag}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+    </header>
+
+    <section class="w-full relative group">
+      <div
+        class="w-full aspect-video bg-main-border overflow-hidden rounded-sm shadow-2xl transition-transform duration-700 hover:scale-[1.01]"
+      >
+        {
+          project?.yt ? (
+            <iframe
+              src={project?.yt.replace("watch?v=", "embed/")}
+              class="w-full h-full grayscale hover:grayscale-0 transition-all duration-1000"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"
+              loading="lazy"
+              title="Project Demo"
+            />
+          ) : (
+            <h1>Project Demo</h1>
+          )
+        }
+      </div>
+      <p
+        class="font-nav text-[10px] uppercase tracking-widest mt-4 text-right text-text/40"
+      >
+        Visual Representation // Project Demo
+      </p>
+    </section>
+
+    <section
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 border-t border-main-border pt-12"
+    >
+      <div class="flex flex-col gap-4">
+        <h3 class="font-title italic text-3xl">Concept</h3>
+        <p class="font-text text-lg opacity-80">
+          Developed with a focus on user experience and technical efficiency.
+          This project aims to solve complex problems through a minimalist and
+          functional interface.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <h3 class="font-title italic text-3xl">Challenge</h3>
+        <p class="font-text text-lg opacity-80">
+          The integration of **Fullstack** services and real-time data
+          management were the pillars of this development, ensuring a scalable
+          arquitectura escalable.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-6 items-start lg:items-end">
+        <a
+          href={project?.to || ""}
+          target="_blank"
+          class="bg-text text-main-bg font-nav text-xs px-10 py-5 rounded-full hover:bg-button transition-colors uppercase tracking-widest"
+        >
+          Visit Live Project
+        </a>
+        <a
+          href="https://github.com/tadeowoto"
+          class="font-nav text-[10px] underline underline-offset-8 hover:text-button transition-colors"
+        >
+          VIEW SOURCE CODE ON GITHUB
+        </a>
+      </div>
+    </section>
+  </main>
 </Layout>
