@@ -16,6 +16,8 @@ import dashboard from "../assets/projects/aidashboard.png"
 import azeroth from "../assets/projects/azeroth.png"
 import loficorner from "../assets/projects/loficorner.png"
 import todo from "../assets/projects/todo.png"
+import aidashboarduc from "../assets/images/ai-dashboard-UC.png"
+import aidashboarder from "../assets/images/ai-dashboard-erDiagram.png"
 
 
 export const socialMediaData = [
@@ -103,6 +105,10 @@ export const projectData = [
     tags: ["Nextjs", "Tailwind", "Supabase", "AI-SDK", "Typescript", "Google Sdk", "Github 0auth"],
     to: "/projects/1",
     yt: "https://www.youtube.com/watch?v=Y1rpKwtOfJI",
+    concept: "The concept was to create an app that helps developers improve their prompts, giving them feedback and scores of different types, and even a new, improved version of their prompt.",
+    challenge: "The biggest challenge I encountered while developing this app was integrating Vercel's AI SDK services and its many built-in features. Additionally, using supabase with GitHub's OAuth and the tables that supabase generates was also very challenging.",
+    schema1:  aidashboarder,
+    schema2: aidashboarduc,
   },
   {
     id: 2,
@@ -112,6 +118,8 @@ export const projectData = [
     tags: ["Astro", "Tailwind", "Typescript", "Spring Boot", "MySql"],
     to: "https://github.com/tadeowoto/azeroth-dev",
     yt: "https://www.youtube.com/watch?v=I6XpZ6XpZ6X",
+    concept: "A full-stack app for notes on the free resources I used throughout my learning, inspired by boot.dev using WarcraftCN.",
+    challenge: "A full-stack app for notes on the free resources I used throughout my learning, inspired by boot.dev using WarcraftCN.",
   },
   {
     id: 3,

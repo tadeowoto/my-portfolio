@@ -1,7 +1,6 @@
 ---
 import { projectData } from "../../mocks/data.ts";
 import Layout from "../../layouts/Layout.astro";
-import { Image } from "astro:assets";
 import "../../styles/global.css";
 
 export async function getStaticPaths() {
@@ -86,23 +85,19 @@ const project = projectData.find((project) => project.id === Number(id));
     </section>
 
     <section
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 border-t border-main-border pt-12"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 border-t border-b border-main-border py-12"
     >
       <div class="flex flex-col gap-4">
         <h3 class="font-title italic text-3xl">Concept</h3>
         <p class="font-text text-lg opacity-80">
-          Developed with a focus on user experience and technical efficiency.
-          This project aims to solve complex problems through a minimalist and
-          functional interface.
+          {project?.concept || ""}
         </p>
       </div>
 
       <div class="flex flex-col gap-4">
         <h3 class="font-title italic text-3xl">Challenge</h3>
         <p class="font-text text-lg opacity-80">
-          The integration of **Fullstack** services and real-time data
-          management were the pillars of this development, ensuring a scalable
-          arquitectura escalable.
+          {project?.challenge || ""}
         </p>
       </div>
 
@@ -121,6 +116,12 @@ const project = projectData.find((project) => project.id === Number(id));
           VIEW SOURCE CODE ON GITHUB
         </a>
       </div>
+    </section>
+    <section>
+      <header>
+        <h1>Schemas and Tables</h1>
+      </header>
+      <div></div>
     </section>
   </main>
 </Layout>
