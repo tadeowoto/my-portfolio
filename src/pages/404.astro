@@ -1,0 +1,81 @@
+---
+import { Image } from "astro:assets";
+import myGif from "../assets/images/404.gif";
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+---
+
+<Layout>
+  <main
+    class="w-full h-screen bg-secondary-bg flex flex-col items-center justify-center px-6 overflow-hidden"
+  >
+    <div class="relative mb-8">
+      <span
+        class="font-nav text-[10px] md:text-xs uppercase tracking-[0.4em] text-text/40 block text-center mb-2"
+      >
+        Error Code // 404
+      </span>
+      <h1
+        class="text-[20vw] md:text-[15rem] font-title font-extrabold leading-none tracking-tighter text-text opacity-10 select-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap"
+      >
+        NOT FOUND
+      </h1>
+      <h2
+        class="text-7xl md:text-9xl font-title font-black text-text relative z-10 italic"
+      >
+        404
+      </h2>
+    </div>
+
+    <div
+      class="group relative w-full max-w-md aspect-video bg-main-border overflow-hidden rounded-sm border border-main-border shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
+    >
+      <Image
+        src={myGif}
+        alt="404 error meme"
+        class="w-full h-full object-cover"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-secondary-bg/80 to-transparent opacity-60"
+      >
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-col items-center gap-6">
+      <p
+        class="font-text text-lg text-text/60 text-center max-w-xs leading-tight"
+      >
+        The page you are looking for has been moved or doesn't exist in this
+        reality.
+      </p>
+
+      <a
+        href="/"
+        class="bg-text text-main-bg font-nav text-xs px-10 py-5 rounded-full hover:bg-button transition-colors uppercase tracking-widest"
+      >
+        Return to Home
+      </a>
+
+      <a
+        href="https://github.com/tadeowoto"
+        target="_blank"
+        class="font-nav text-[10px] underline underline-offset-8 text-text/40 hover:text-text transition-colors uppercase"
+      >
+        Report a bug
+      </a>
+    </div>
+
+    <div
+      class="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20"
+    >
+      <div
+        class="absolute top-1/4 -left-12 w-64 h-64 bg-button/10 blur-[120px] rounded-full"
+      >
+      </div>
+      <div
+        class="absolute bottom-1/4 -right-12 w-96 h-96 bg-text/5 blur-[150px] rounded-full"
+      >
+      </div>
+    </div>
+  </main>
+</Layout>
