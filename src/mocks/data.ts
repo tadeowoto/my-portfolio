@@ -114,11 +114,11 @@ export const projectData = [
   {
     id: 2,
     src: azeroth,
-    title: "Azheroth Notes",
+    title: "Azheroth Notes (WIP) 🚧",
     desc: "A full-stack app for notes on the free resources I used throughout my learning, inspired by boot.dev using WarcraftCN.",
     tags: ["Astro", "Tailwind", "Typescript", "Spring Boot", "MySql"],
     to: "/projects/2",
-    yt: "https://www.youtube.com/watch?v=I6XpZ6XpZ6X",
+    yt: "https://www.youtube.com/watch?v=eYzFBe9CRCc",
     concept: "The concept behind this app is to share the resources I used that helped me a lot in my learning, a place where you can level up simply by learning for free and share all your progress as a developer. WIP 🚧",
     challenge: "The biggest challenge I encountered was creating the API, models, and MySQL database from scratch.",
     schema1:  azerother,

@@ -5,13 +5,18 @@ import "../../styles/global.css";
 import { Image } from "astro:assets";
 
 export async function getStaticPaths() {
-  return projectData.map((project) => {
-    return {
+  return [
+    {
       params: {
-        id: project.id.toString(),
+        id: 1,
       },
-    };
-  });
+    },
+    {
+      params: {
+        id: 2,
+      },
+    },
+  ];
 }
 
 const { id } = Astro.params;
