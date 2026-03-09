@@ -84,6 +84,39 @@ const project = projectData.find((project) => project.id === Number(id));
         Visual Representation // Project Demo
       </p>
     </section>
+    <section
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 border-t border-main-border pt-12"
+    >
+      <div class="flex flex-col gap-4">
+        <h3 class="font-title italic text-3xl">Concept</h3>
+        <p class="font-text text-lg opacity-80">
+          {project?.concept}
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <h3 class="font-title italic text-3xl">Challenge</h3>
+        <p class="font-text text-lg opacity-80">
+          {project?.challenge}
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-6 items-start lg:items-end">
+        <a
+          href={project?.to || ""}
+          target="_blank"
+          class="bg-text text-main-bg font-nav text-xs px-10 py-5 rounded-full hover:bg-button transition-colors uppercase tracking-widest"
+        >
+          Visit Live Project
+        </a>
+        <a
+          href="https://github.com/tadeowoto"
+          class="font-nav text-[10px] underline underline-offset-8 hover:text-button transition-colors"
+        >
+          VIEW SOURCE CODE ON GITHUB
+        </a>
+      </div>
+    </section>
 
     <section class="flex flex-col gap-12 border-t border-main-border py-16">
       <header class="flex flex-col gap-2">
@@ -100,11 +133,13 @@ const project = projectData.find((project) => project.id === Number(id));
         {
           project?.schema1 && (
             <div class="group flex flex-col gap-5">
-              <Image
-                src={project.schema1}
-                alt="Database Entity Relationship Diagram"
-                class="w-full h-full object-contain rounded-bl-4xl rounded-tr-4xl"
-              />
+              <div class="relative overflow-hidden rounded-xl border border-main-border aspect-16/10   flex items-center justify-center p-6  ">
+                <Image
+                  src={project.schema1}
+                  alt="Database Entity Relationship Diagram"
+                  class="w-full h-full object-contain "
+                />
+              </div>
 
               <div class="flex justify-between items-baseline px-1">
                 <h4 class="font-title text-2xl italic text-text/80">
@@ -117,14 +152,17 @@ const project = projectData.find((project) => project.id === Number(id));
             </div>
           )
         }
+
         {
           project?.schema2 && (
             <div class="group flex flex-col gap-5">
-              <Image
-                src={project.schema2}
-                alt="System Use Case Diagram"
-                class="w-full h-full object-contain rounded-br-4xl rounded-tr-4xl"
-              />
+              <div class="relative overflow-hidden rounded-xl border aspect-16/10 border-main-border flex items-center justify-center p-6  ">
+                <Image
+                  src={project.schema2}
+                  alt="System Use Case Diagram"
+                  class="w-full h-full object-contain"
+                />
+              </div>
               <div class="flex justify-between items-baseline px-1">
                 <h4 class="font-title text-2xl italic text-text/80">
                   02 // System Logic
