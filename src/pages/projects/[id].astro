@@ -105,22 +105,6 @@ const project = projectData.find((project) => project.id === Number(id));
           {project?.challenge}
         </p>
       </div>
-
-      <div class="flex flex-col gap-6 items-start lg:items-end">
-        <a
-          href={project?.to || ""}
-          target="_blank"
-          class="bg-text text-main-bg font-nav text-xs px-10 py-5 rounded-full hover:bg-button transition-colors uppercase tracking-widest"
-        >
-          Visit Live Project
-        </a>
-        <a
-          href="https://github.com/tadeowoto"
-          class="font-nav text-[10px] underline underline-offset-8 hover:text-button transition-colors"
-        >
-          VIEW SOURCE CODE ON GITHUB
-        </a>
-      </div>
     </section>
 
     <section class="flex flex-col gap-12 border-t border-main-border py-16">
